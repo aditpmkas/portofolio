@@ -195,4 +195,11 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  /* Project detail images responsiveness for smaller screens */
+  .project-detail-img, .gallery-img {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed for desired mobile size */
+    height: auto;
+  }
 }
