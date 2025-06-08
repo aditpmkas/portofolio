@@ -28,6 +28,8 @@ header {
   text-align: center;
   padding: 2rem 1rem 1rem;
   border-bottom: 1px solid #ccc;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 nav {
@@ -160,24 +162,13 @@ footer {
   margin-right: auto;
 }
 
-.social-icons-footer a {
-  font-size: 0.9rem;
-  margin: 0 0.2rem;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-  color: var(--text);
-}
-
-.social-icons-footer a:hover {
-  filter: grayscale(0%);
-}
-
 .social-icons-footer a i {
   font-size: 1rem;
   margin: 0 0.2rem;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
   color: var(--text);
+  vertical-align: middle;
 }
 
 .social-icons-footer a:hover i {
