@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outbreak | Project Detail</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <header>
+    <h1>Outbreak</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="3squest.html">3S QUEST</a>
+      <a href="raturu.html">RATURU</a>
+      <a href="redruse.html">REDRUSE</a>
+      <a href="outbreak.html">OUTBREAK</a>
+      <a href="3d_animation.html">Urban Night City</a>
+      <button id="darkModeToggle">☀️</button>
+    </nav>
+  </header>
+  <main class="content-section">
+    <div class="project-detail-header">
+      <div class="project-detail-image">
+        <img src="src/outbreak/outbreak main menu.png" alt="Outbreak Main Menu" class="project-detail-img"/>
+      </div>
+      <div class="project-detail-info">
+        <p><strong>Released:</strong> 2025</p>
+        <p><strong>Work with:</strong> Game Development Bootcamp Group Project</p>
+        <p><strong>Platform:</strong> PC</p>
+        <p><strong>Team Size:</strong> 3</p>
+        <p><strong>Project Length:</strong> 1 week</p>
+        <p><strong>Responsibilities:</strong> Game design, Game programming</p>
+        <p><strong>Engine and Tools:</strong> Unity, Aseprite</p>
+        <p><strong>Assignment:</strong> Game Intelligence subject, President University</p>
+      </div>
+    </div>
+    <hr class="section-divider"/>
+    <h2>Summary of Contributions</h2>
+    <p>
+      Outbreak was developed as a group project for the "Game Intelligence" subject during a game development bootcamp at my campus. Our team of three built the game in just one week. My main responsibilities were game design and programming. I focused on implementing the AI for the zombies, including navigation and state changes (idle, chase, attack, death), as well as other core gameplay mechanics.
+    </p>
+
+    <h3>Outbreak Overview</h3>
+    <h4>Zombie AI: Navigation & State Changes</h4>
+    <div class="project-gallery">
+      <img src="src/outbreak/outbreak chase1.gif" alt="Zombie Chasing Player 1" class="gallery-img" style="max-width: 48%;"/>
+      <img src="src/outbreak/outbreak chase2.gif" alt="Zombie Chasing Player 2" class="gallery-img" style="max-width: 48%;"/>
+      <p>I implemented the AI for the zombies, including navigation and state transitions between idle, chase, attack, and death. These GIFs show the zombies actively chasing the player using the navigation system I programmed.</p>
+    </div>
+
+    <h4>Bullet Mark Feature</h4>
+    <div class="project-gallery">
+      <img src="src/outbreak/outbreak bullet .gif" alt="Bullet Mark Feature" class="gallery-img" style="max-width: 48%;"/>
+      <p>This GIF demonstrates the bullet mark feature. (Note: This mechanic was developed by my teammate.)</p>
+    </div>
+
+    <hr class="section-divider"/>
+    <h2 style="font-size: 2rem; margin-top: 2rem; margin-bottom: 1rem; font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; letter-spacing: 1px;">Additional Game Screenshots</h2>
+    <p>Here are some additional screenshots showcasing Outbreak.</p>
+    <style>
+      .project-gallery.custom-screens {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .project-gallery.custom-screens img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        background: #222;
+        display: block;
+      }
+      @media (max-width: 900px) {
+        .project-gallery.custom-screens {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .project-gallery.custom-screens {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <div class="project-gallery custom-screens">
+      <img src="src/outbreak/outbreak screenshot 3.png" alt="Outbreak Screenshot 3" style="grid-column: span 3;"/>
+      <img src="src/outbreak/outbreak screenshot.png" alt="Outbreak Screenshot 1" style="grid-column: span 2; aspect-ratio: 16/9;"/>
+      <img src="src/outbreak/outbreak screenshot 2.png" alt="Outbreak Screenshot 2" style="aspect-ratio: 1/1;"/>
+      <img src="src/outbreak/outbreak screenshot 4.png" alt="Outbreak Screenshot 4" style="aspect-ratio: 1/1;"/>
+      <img src="src/outbreak/outbreak screenshot 5.png" alt="Outbreak Screenshot 5" style="aspect-ratio: 1/1;"/>
+      <img src="src/outbreak/outbreak screenshot 6.png" alt="Outbreak Screenshot 6" style="grid-column: span 2;"/>
+      <img src="src/outbreak/outbreak screenshot 7.png" alt="Outbreak Screenshot 7" style="aspect-ratio: 1/1;"/>
+      <img src="src/outbreak/outbreak screenshot 9.png" alt="Outbreak Screenshot 9" style="aspect-ratio: 1/1; grid-row: 3; grid-column: 3;"/>
+      <img src="src/outbreak/outbreak screenshot 8.png" alt="Outbreak Screenshot 8" style="grid-column: span 3;"/>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Aditya Pamungkas</p>
+    <div class="social-icons-footer">
+      <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 
