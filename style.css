@@ -149,6 +149,15 @@ nav a, #darkModeToggle {
   justify-content: center;
 }
 
+.gallery-img {
+  max-width: 48%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
 .project-detail-header {
   display: flex;
   gap: 2rem;
@@ -235,5 +244,13 @@ footer {
     width: 100%;
     max-width: 300px;
     height: auto;
+  }
+
+  .project-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-img {
+    max-width: 100%;
   }
 }

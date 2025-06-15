@@ -6,6 +6,37 @@
   <title>Aditya Pamungkas | Game Developer Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+    .project-block {
+      background: var(--card-bg, #181818);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      padding: 2.2rem 2rem 2rem 2rem;
+      flex: 1 1 400px;
+      min-width: 370px;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+      cursor: pointer;
+      font-size: 1.08rem;
+    }
+    .project-block:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+    }
+    .project-block img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
+    }
+  </style>
 </head>
 <body class="dark-mode"> <!-- Default to dark mode -->
   <header>
@@ -49,7 +80,7 @@
     <section id="projects" class="content-section">
       <h2>Projects</h2>
       <div class="projects-grid">
-        <div class="project-block">
+        <div class="project-block" onclick="window.location.href='3squest.html'">
           <h3>3S Quest: Tidy Up the Workplace</h3>
           <img src="src/3squest/3squest.png" alt="3S Quest: Tidy Up the Workplace" class="project-img"/>
           <p>
@@ -60,9 +91,8 @@
             <strong>Engine and Tools:</strong> Unity, Oculus SDK<br>
             <strong>Platform:</strong> Oculus Quest 2 (VR)
           </p>
-          <a href="3squest.html" class="project-link">View Project</a>
         </div>
-        <div class="project-block">
+        <div class="project-block" onclick="window.location.href='raturu.html'">
           <h3>RATURU: Home Fever</h3>
           <img src="src/raturu.png" alt="RATURU: Home Fever" class="project-img"/>
           <p>
@@ -73,9 +103,8 @@
             <strong>Engine and Tools:</strong> Unity<br>
             <strong>Platform:</strong> PC
           </p>
-          <a href="raturu.html" class="project-link">View Project</a>
         </div>
-        <div class="project-block">
+        <div class="project-block" onclick="window.location.href='redruse.html'">
           <h3>RedRuse</h3>
           <img src="src/redruse/redruse.png" alt="RedRuse" class="project-img"/>
           <p>
@@ -86,22 +115,20 @@
             <strong>Engine and Tools:</strong> Unity, Aseprite<br>
             <strong>Platform:</strong> PC
           </p>
-          <a href="redruse.html" class="project-link">View Project</a>
         </div>
-        <div class="project-block">
+        <div class="project-block" onclick="window.location.href='outbreak.html'">
           <h3>Outbreak</h3>
           <img src="src/outbreak/outbreak main menu.png" alt="Outbreak" class="project-img"/>
           <p>
-            <strong>What I did:</strong> I was responsible for game design and programming, focusing on the AI for zombie navigation and state changes (idle, chase, attack).<br>
+            <strong>What I did:</strong> I was responsible for game design and programming, focusing on the AI for zombie navigation and state changes (idle, chase, attack, death).<br>
             <strong>Work with:</strong> Game Development Bootcamp Group Project<br>
             <strong>Team Size:</strong> 3<br>
             <strong>Project Length:</strong> 1 week<br>
             <strong>Engine and Tools:</strong> Unity, Aseprite<br>
             <strong>Platform:</strong> PC
           </p>
-          <a href="outbreak.html" class="project-link">View Project</a>
         </div>
-        <div class="project-block">
+        <div class="project-block" onclick="window.location.href='3d_animation.html'">
           <h3>Urban Night City</h3>
           <img src="src/3dcga/3dcga.png" alt="Urban Night City" class="project-img"/>
           <p>
@@ -113,7 +140,6 @@
             <strong>Platform:</strong> Video<br>
             <strong>Assignment:</strong> 3D Computer Graphic and Animation subject, Semester 4, President University
           </p>
-          <a href="3d_animation.html" class="project-link">View Project</a>
         </div>
       </div>
     </section>
