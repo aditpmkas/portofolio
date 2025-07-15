@@ -9,90 +9,142 @@
 </head>
 <body class="dark-mode">
   <header>
-    <h1>3S Quest: Tidy Up the Workplace</h1>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="3squest.html">3S QUEST</a>
-      <a href="raturu.html">RATURU</a>
-      <a href="redruse.html">REDRUSE</a>
-      <a href="outbreak.html">OUTBREAK</a>
-      <a href="3d_animation.html">URBAN NIGHT CITY</a>
-      <button id="darkModeToggle">☀️</button>
-    </nav>
+    <div class="header-content">
+      <div class="logo">Aditya Pamungkas</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-sun"></i>
+        </button>
+      </nav>
+    </div>
   </header>
-  <main class="content-section">
-    <div class="project-detail-header">
-      <div class="project-detail-image">
-        <img src="src/3squest/3squest.png" alt="3S Quest: Tidy Up the Workplace" class="project-detail-img"/>
+  <main>
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:2rem; color:var(--text-primary); font-size:2.5rem; font-weight:700;">3S Quest: Tidy Up the Workplace</h2>
+      <div class="project-detail-header" style="display: flex; gap: 2rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+        <div class="project-detail-image" style="flex: 1 1 300px; max-width: 400px; min-width: 250px;">
+          <img src="src/3squest/3squest.png" alt="3S Quest: Tidy Up the Workplace" class="project-detail-img"/>
+        </div>
+        <div class="project-detail-info" style="flex: 2 1 350px; min-width: 250px;">
+          <p><strong>Released:</strong> 2025</p>
+          <p><strong>Work with:</strong> PT Mattel Indonesia</p>
+          <p><strong>Platform:</strong> Oculus Quest 2 (VR)</p>
+          <p><strong>Team Size:</strong> 4</p>
+          <p><strong>Project Length:</strong> 2 months</p>
+          <p><strong>Responsibilities:</strong> Programmed gameplay for Map 1 Level 1 and Map 2 Level 1, collaborated on design and testing</p>
+          <p><strong>Engine and Tools:</strong> Unity, Oculus SDK</p>
+        </div>
       </div>
-      <div class="project-detail-info">
-        <p><strong>Released:</strong> 2025</p>
-        <p><strong>Work with:</strong> PT Mattel Indonesia</p>
-        <p><strong>Platform:</strong> Oculus Quest 2 (VR)</p>
-        <p><strong>Team Size:</strong> 4</p>
-        <p><strong>Project Length:</strong> 2 months</p>
-        <p><strong>Responsibilities:</strong> Programmed gameplay for Map 1 Level 1 and Map 2 Level 1, collaborated on design and testing</p>
-        <p><strong>Engine and Tools:</strong> Unity, Oculus SDK</p>
+      <hr class="section-divider"/>
+      <h2>Summary of Contributions</h2>
+      <p>
+        I was responsible for programming the gameplay for two key levels, collaborating with a multidisciplinary team to deliver an engaging VR learning experience. My work included implementing core mechanics, debugging, and playtesting to ensure a smooth and educational experience for players.
+      </p>
+
+      <h3>Map 1 Level 1</h3>
+      <h4>Sorting</h4>
+      <div class="project-gallery">
+        <img src="src/3squest/map 1 sorting.gif" alt="Map 1 Level 1 Sorting Screenshot" class="gallery-img centered-media"/>
+        <p>I implemented the sorting mechanics in this phase, ensuring players must complete these specific tasks before interacting with other phases of the level.</p>
       </div>
-    </div>
-    <hr class="section-divider"/>
-    <h2>Summary of Contributions</h2>
-    <p>
-      I was responsible for programming the gameplay for two key levels, collaborating with a multidisciplinary team to deliver an engaging VR learning experience. My work included implementing core mechanics, debugging, and playtesting to ensure a smooth and educational experience for players.
-    </p>
 
-    <h3>Map 1 Level 1</h3>
-    <h4>Sorting</h4>
-    <div class="project-gallery">
-      <img src="src/3squest/map 1 sorting.gif" alt="Map 1 Level 1 Sorting Screenshot" class="gallery-img"/>
-      <p>I implemented the sorting mechanics in this phase, ensuring players must complete these specific tasks before interacting with other phases of the level.</p>
-    </div>
+      <h4>Set In Order</h4>
+      <div class="project-gallery">
+        <img src="src/3squest/map 1 sio.gif" alt="Map 1 Level 1 Set In Order Screenshot" class="gallery-img centered-media"/>
+        <p>This image shows the 'Set In Order' phase, where I developed the logic that restricts player interaction to only the current phase until its tasks are completed.</p>
+      </div>
 
-    <h4>Set In Order</h4>
-    <div class="project-gallery">
-      <img src="src/3squest/map 1 sio.gif" alt="Map 1 Level 1 Set In Order Screenshot" class="gallery-img"/>
-      <p>This image shows the 'Set In Order' phase, where I developed the logic that restricts player interaction to only the current phase until its tasks are completed.</p>
-    </div>
+      <h4>Shine</h4>
+      <div class="project-gallery">
+        <img src="src/3squest/map 1 shine.gif" alt="Map 1 Level 1 Shine Screenshot" class="gallery-img centered-media"/>
+        <p>In this 'Shine' phase GIF, you can see the results of completing the final tasks, such as putting away the cleaning tools. I also implemented the UI success panel that appears upon completion, offering options to return to the main menu or continue.</p>
+      </div>
 
-    <h4>Shine</h4>
-    <div class="project-gallery">
-      <img src="src/3squest/map 1 shine.gif" alt="Map 1 Level 1 Shine Screenshot" class="gallery-img"/>
-      <p>In this 'Shine' phase GIF, you can see the results of completing the final tasks, such as putting away the cleaning tools. I also implemented the UI success panel that appears upon completion, offering options to return to the main menu or continue.</p>
-    </div>
+      <h3>Map 2 Level 1</h3>
+      <h4>Sorting</h4>
+      <div class="project-gallery">
+        <img src="src/3squest/map 2 sorting.gif" alt="Map 2 Level 1 Sorting Screenshot" class="gallery-img centered-media"/>
+        <p>I implemented the sorting mechanics in this phase for Map 2, ensuring players must complete these specific tasks before interacting with other phases of the level.</p>
+      </div>
 
-    <h3>Map 2 Level 1</h3>
-    <h4>Sorting</h4>
-    <div class="project-gallery">
-      <img src="src/3squest/map 2 sorting.gif" alt="Map 2 Level 1 Sorting Screenshot" class="gallery-img"/>
-      <p>I implemented the sorting mechanics in this phase for Map 2, ensuring players must complete these specific tasks before interacting with other phases of the level.</p>
-    </div>
+      <h4>Set In Order</h4>
+      <div class="project-gallery">
+        <img src="src/3squest/map 2 sio.gif" alt="Map 2 Level 1 Set In Order Screenshot" class="gallery-img centered-media"/>
+        <p>This image shows the 'Set In Order' phase in Map 2, where I developed the logic that restricts player interaction to only the current phase until its tasks are completed.</p>
+      </div>
 
-    <h4>Set In Order</h4>
-    <div class="project-gallery">
-      <img src="src/3squest/map 2 sio.gif" alt="Map 2 Level 1 Set In Order Screenshot" class="gallery-img"/>
-      <p>This image shows the 'Set In Order' phase in Map 2, where I developed the logic that restricts player interaction to only the current phase until its tasks are completed.</p>
-    </div>
+      <h4>Shine</h4>
+      <div class="project-gallery" style="display: flex; gap: 1rem; justify-content: center; align-items: flex-start;">
+        <img src="src/3squest/map 2 shine.gif" alt="Map 2 Level 1 Shine Phase 2 Screenshot" class="gallery-img centered-media" style="max-width: 48%;"/>
+        <img src="src/3squest/map 2 shine2.gif" alt="Map 2 Level 1 Shine Phase 1 Screenshot" class="gallery-img centered-media" style="max-width: 48%;"/>
+      </div>
+      <p style="text-align:center;">In these 'Shine' phase GIFs for Map 2, you can see the results of completing the final tasks, such as putting away the cleaning tools. I also implemented the UI success panel that appears upon completion, offering options to return to the main menu or continue.</p>
 
-    <h4>Shine</h4>
-    <div class="project-gallery">
-      <img src="src/3squest/map 2 shine.gif" alt="Map 2 Level 1 Shine Phase 2 Screenshot" class="gallery-img"/>
-      <img src="src/3squest/map 2 shine2.gif" alt="Map 2 Level 1 Shine Phase 1 Screenshot" class="gallery-img"/>
-      <p>In these 'Shine' phase GIFs for Map 2, you can see the results of completing the final tasks, such as putting away the cleaning tools. I also implemented the UI success panel that appears upon completion, offering options to return to the main menu or continue.</p>
+      <hr class="section-divider"/>
+      <h2>External Link</h2>
+      <p>View on GitHub: <a href="https://github.com/aditpmkas/Mattel_5S" target="_blank">Mattel_5S GitHub Repository</a></p>
     </div>
-
-    <hr class="section-divider"/>
-    <h2>External Link</h2>
-    <p>View on GitHub: <a href="https://github.com/aditpmkas/Mattel_5S" target="_blank">Mattel_5S GitHub Repository</a></p>
   </main>
+  <section class="feedback-section">
+    <div class="container">
+      <h2>Feedback</h2>
+      <form id="feedbackForm" class="feedback-form">
+        <div class="form-group">
+          <label for="feedbackName">Name</label>
+          <input type="text" id="feedbackName" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackEmail">Email</label>
+          <input type="email" id="feedbackEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackMessage">Message</label>
+          <textarea id="feedbackMessage" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Feedback</button>
+      </form>
+    </div>
+  </section>
+  
   <footer>
-    <p>© 2025 Aditya Pamungkas</p>
-    <div class="social-icons-footer">
-      <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Aditya Pamungkas</h3>
+          <p>Game Developer & Creative Technologist</p>
+          <p>Passionate about creating immersive gaming experiences and innovative digital solutions.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Connect With Me</h4>
+          <div class="social-icons-footer">
+            <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+          <p class="email-text">aditya.pamungkas.sdn@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Aditya Pamungkas. All rights reserved.</p>
+        <p>Built with passion and creativity</p>
+      </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html> 

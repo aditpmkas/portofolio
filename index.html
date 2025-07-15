@@ -4,157 +4,315 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aditya Pamungkas | Game Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    .projects-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-    }
-    .project-block {
-      background: var(--card-bg, #181818);
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      padding: 2.2rem 2rem 2rem 2rem;
-      flex: 1 1 400px;
-      min-width: 370px;
-      max-width: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
-      cursor: pointer;
-      font-size: 1.08rem;
-    }
-    .project-block:hover {
-      transform: scale(1.04);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.25);
-    }
-    .project-block img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1.2rem;
-    }
-  </style>
 </head>
-<body class="dark-mode"> <!-- Default to dark mode -->
+<body class="dark-mode">
   <header>
-    <h1>Aditya Pamungkas - Game Developer Portfolio</h1>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="3squest.html">3S QUEST</a>
-      <a href="raturu.html">RATURU</a>
-      <a href="redruse.html">REDRUSE</a>
-      <a href="outbreak.html">OUTBREAK</a>
-      <a href="3d_animation.html">URBAN NIGHT CITY</a>
-      <button id="darkModeToggle">☀️</button>
-    </nav>
+    <div class="header-content">
+      <div class="logo">Aditya Pamungkas</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-sun"></i>
+        </button>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="about" class="content-section">
-      <h2>About</h2>
-      <div class="about-wrapper">
-        <div class="about-left">
-          <img src="src/foto adit.jpeg" alt="Aditya Pamungkas" class="profile-img"/>
-          <div class="contact-icons">
-            <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
-          <p style="margin-top: 1rem;"><a href="src/file/CV_OF_ADITYA_PAMUNGKAS2.pdf" target="_blank" class="project-link">View My Resume (PDF)</a></p>
-        </div>
-        <div class="about-right">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Game Developer & Creative Technologist</h1>
           <p>
-            Hello, I'm Aditya Pamungkas. I'm a 6th-semester student at President University majoring in Informatics, batch of 2023, with a concentration in Game Development.
-            I've been learning Game Development for 4 months and participated in a Game Jam competition. I also joined a game studio at my university named Buzzy Wizzy Studio.
-            I enjoy building immersive game experiences and solving problems creatively.
+            Crafting immersive gaming experiences with cutting-edge technology. 
+            Specializing in Unity development, VR experiences, and interactive storytelling.
           </p>
+          <a href="#projects" class="cta-button">
+            <i class="fas fa-gamepad"></i>
+            Explore My Work
+          </a>
         </div>
       </div>
-      <hr class="section-divider"/>
     </section>
 
-    <section id="projects" class="content-section">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-block" onclick="window.location.href='3squest.html'">
-          <h3>3S Quest: Tidy Up the Workplace</h3>
-          <img src="src/3squest/3squest.png" alt="3S Quest: Tidy Up the Workplace" class="project-img"/>
-          <p>
-            <strong>What I did:</strong> I was responsible for programming the gameplay for Map 1 Level 1 and Map 2 Level 1. I collaborated with the team to create interactive VR experiences that teach players about organization and cleanliness.<br>
-            <strong>Work with:</strong> PT Mattel Indonesia<br>
-            <strong>Team Size:</strong> 4<br>
-            <strong>Project Length:</strong> 2 months<br>
-            <strong>Engine and Tools:</strong> Unity, Oculus SDK<br>
-            <strong>Platform:</strong> Oculus Quest 2 (VR)
-          </p>
-        </div>
-        <div class="project-block" onclick="window.location.href='raturu.html'">
-          <h3>RATURU: Home Fever</h3>
-          <img src="src/raturu.png" alt="RATURU: Home Fever" class="project-img"/>
-          <p>
-            <strong>What I did:</strong> I worked as a programmer and level designer for Level 1, and contributed to the story together with my team.<br>
-            <strong>Work with:</strong> Buzzy Wizzy Studio<br>
-            <strong>Team Size:</strong> 10<br>
-            <strong>Project Length:</strong> 1 week (Game Jam)<br>
-            <strong>Engine and Tools:</strong> Unity<br>
-            <strong>Platform:</strong> PC
-          </p>
-        </div>
-        <div class="project-block" onclick="window.location.href='redruse.html'">
-          <h3>RedRuse</h3>
-          <img src="src/redruse/redruse.png" alt="RedRuse" class="project-img"/>
-          <p>
-            <strong>What I did:</strong> This was my personal project—I handled everything from game design and programming to art and level creation. I developed all mechanics, visuals, and levels on my own.<br>
-            <strong>Work with:</strong> Personal Project<br>
-            <strong>Team Size:</strong> 1<br>
-            <strong>Project Length:</strong> 2 weeks<br>
-            <strong>Engine and Tools:</strong> Unity, Aseprite<br>
-            <strong>Platform:</strong> PC
-          </p>
-        </div>
-        <div class="project-block" onclick="window.location.href='outbreak.html'">
-          <h3>Outbreak</h3>
-          <img src="src/outbreak/outbreak main menu.png" alt="Outbreak" class="project-img"/>
-          <p>
-            <strong>What I did:</strong> I was responsible for game design and programming, focusing on the AI for zombie navigation and state changes (idle, chase, attack, death).<br>
-            <strong>Work with:</strong> Game Development Bootcamp Group Project<br>
-            <strong>Team Size:</strong> 3<br>
-            <strong>Project Length:</strong> 1 week<br>
-            <strong>Engine and Tools:</strong> Unity, Aseprite<br>
-            <strong>Platform:</strong> PC
-          </p>
-        </div>
-        <div class="project-block" onclick="window.location.href='3d_animation.html'">
-          <h3>Urban Night City</h3>
-          <img src="src/3dcga/3dcga.png" alt="Urban Night City" class="project-img"/>
-          <p>
-            <strong>What I did:</strong> I was responsible for 3D modeling, animation, and editing.<br>
-            <strong>Work with:</strong> Group Project<br>
-            <strong>Team Size:</strong> 4<br>
-            <strong>Project Length:</strong> 1 month<br>
-            <strong>Engine and Tools:</strong> Blender<br>
-            <strong>Platform:</strong> Video<br>
-            <strong>Assignment:</strong> 3D Computer Graphic and Animation subject, Semester 4, President University
-          </p>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="profile-card">
+            <img src="src/foto adit.jpeg" alt="Aditya Pamungkas" class="profile-img">
+            <div class="contact-icons">
+              <a href="https://github.com/aditpmkas" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <a href="src/file/CV_OF_ADITYA_PAMUNGKAS2.pdf" target="_blank" class="cta-button" style="margin-top: 1rem;">
+              <i class="fas fa-download"></i>
+              Resume
+            </a>
           </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              Hello! I'm Aditya Pamungkas, a passionate 6th-semester Informatics student at President University, 
+              batch of 2023, specializing in Game Development. With 4 months of intensive learning in game development, 
+              I've already participated in Game Jam competitions and joined the Buzzy Wizzy Studio at my university.
+            </p>
+            <br>
+            <p>
+              I thrive on creating immersive gaming experiences that challenge players and tell compelling stories. 
+              My expertise spans across Unity development, VR experiences, AI programming, and 3D animation. 
+              I'm always eager to learn new technologies and push the boundaries of interactive entertainment.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <p>A showcase of my game development journey, from VR experiences to indie games</p>
+        </div>
+        
+        <div class="projects-grid">
+          <div class="project-card" onclick="window.location.href='3squest.html'">
+            <div class="project-image">
+              <img src="src/3squest/3squest.png" alt="3S Quest: Tidy Up the Workplace">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">VR</span>
+                <span class="project-tag">Unity</span>
+                <span class="project-tag">Educational</span>
+              </div>
+              <h3>3S Quest: Tidy Up the Workplace</h3>
+              <p>An immersive VR training experience developed in collaboration with PT Mattel Indonesia, teaching workplace organization through interactive gameplay.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-value">4</span>
+                  <span class="stat-label">Team Size</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">2</span>
+                  <span class="stat-label">Months</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">VR</span>
+                  <span class="stat-label">Platform</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">2025</span>
+                  <span class="stat-label">Released</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.location.href='raturu.html'">
+            <div class="project-image">
+              <img src="src/raturu.png" alt="RATURU: Home Fever">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">Horror</span>
+                <span class="project-tag">Unity</span>
+                <span class="project-tag">Game Jam</span>
+              </div>
+              <h3>RATURU: Home Fever</h3>
+              <p>A psychological horror game developed during a week-long Game Jam with Buzzy Wizzy Studio, featuring dream-like environments and puzzle mechanics.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-value">10</span>
+                  <span class="stat-label">Team Size</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">1</span>
+                  <span class="stat-label">Week</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">PC</span>
+                  <span class="stat-label">Platform</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">2025</span>
+                  <span class="stat-label">Released</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.location.href='redruse.html'">
+            <div class="project-image">
+              <img src="src/redruse/redruse.png" alt="RedRuse">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">Platformer</span>
+                <span class="project-tag">Solo Dev</span>
+                <span class="project-tag">Pixel Art</span>
+              </div>
+              <h3>RedRuse</h3>
+              <p>A challenging platformer game developed entirely by myself, featuring traps, surprises, and pixel art aesthetics inspired by classic arcade games.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-value">1</span>
+                  <span class="stat-label">Solo Dev</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">2</span>
+                  <span class="stat-label">Weeks</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">PC</span>
+                  <span class="stat-label">Platform</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">2025</span>
+                  <span class="stat-label">Released</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.location.href='outbreak.html'">
+            <div class="project-image">
+              <img src="src/outbreak/outbreak main menu.png" alt="Outbreak">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">Action</span>
+                <span class="project-tag">AI</span>
+                <span class="project-tag">Bootcamp</span>
+              </div>
+              <h3>Outbreak</h3>
+              <p>A zombie survival game showcasing advanced AI programming for enemy behavior, including navigation systems and state management.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <span class="stat-value">3</span>
+                  <span class="stat-label">Team Size</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">1</span>
+                  <span class="stat-label">Week</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">PC</span>
+                  <span class="stat-label">Platform</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">2025</span>
+                  <span class="stat-label">Released</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="window.location.href='3d_animation.html'">
+            <div class="project-image">
+              <img src="src/3dcga/3dcga.png" alt="Urban Night City">
+              <div class="project-overlay">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">3D Animation</span>
+                <span class="project-tag">Blender</span>
+                <span class="project-tag">Award Winner</span>
+              </div>
+              <h3>Urban Night City</h3>
+              <p>An award-winning 3D animation project that won FINPROTION 2025
+
+    </div>
   </main>
-
+  
+  <section id="feedback" class="feedback-section">
+    <div class="container">
+      <h2>Feedback</h2>
+      <form id="feedbackForm" class="feedback-form">
+        <div class="form-group">
+          <label for="feedbackName">Name</label>
+          <input type="text" id="feedbackName" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackEmail">Email</label>
+          <input type="email" id="feedbackEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackMessage">Message</label>
+          <textarea id="feedbackMessage" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Feedback</button>
+      </form>      
+    </div>
+  </section>
+  
   <footer>
-    <p>© 2025 Aditya Pamungkas</p>
-    <div class="social-icons-footer">
-      <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Aditya Pamungkas</h3>
+          <p>Game Developer & Creative Technologist</p>
+          <p>Passionate about creating immersive gaming experiences and innovative digital solutions.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Connect With Me</h4>
+          <div class="social-icons-footer">
+            <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+          <p class="email-text">aditya.pamungkas.sdn@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Aditya Pamungkas. All rights reserved.</p>
+        <p>Built with passion and creativity</p>
+      </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

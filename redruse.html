@@ -9,75 +9,129 @@
 </head>
 <body class="dark-mode">
   <header>
-    <h1>RedRuse</h1>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="3squest.html">3S QUEST</a>
-      <a href="raturu.html">RATURU</a>
-      <a href="redruse.html">REDRUSE</a>
-      <a href="outbreak.html">OUTBREAK</a>
-      <a href="3d_animation.html">URBAN NIGHT CITY</a>
-      <button id="darkModeToggle">☀️</button>
-    </nav>
+    <div class="header-content">
+      <div class="logo">Aditya Pamungkas</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-sun"></i>
+        </button>
+      </nav>
+    </div>
   </header>
-  <main class="content-section">
-    <div class="project-detail-header">
-      <div class="project-detail-image">
-        <img src="src/redruse/redruse.png" alt="RedRuse" class="project-detail-img"/>
+  <main>
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:2rem; color:var(--text-primary); font-size:2.5rem; font-weight:700;">RedRuse</h2>
+      <div class="project-detail-header" style="display: flex; gap: 2rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+        <div class="project-detail-image" style="flex: 1 1 300px; max-width: 400px; min-width: 250px;">
+          <img src="src/redruse/redruse.png" alt="RedRuse" class="project-detail-img"/>
+        </div>
+        <div class="project-detail-info" style="flex: 2 1 350px; min-width: 250px;">
+          <p><strong>Released:</strong> 2025</p>
+          <p><strong>Work with:</strong> Personal Project</p>
+          <p><strong>Platform:</strong> PC</p>
+          <p><strong>Team Size:</strong> 1</p>
+          <p><strong>Project Length:</strong> 2 weeks</p>
+          <p><strong>Responsibilities:</strong> Game design, programming, art, level creation, testing, and polish.</p>
+          <p><strong>Engine and Tools:</strong> Unity, Aseprite</p>
+          <p><strong>Assignment:</strong> Game Project subject, President University</p>
+        </div>
       </div>
-      <div class="project-detail-info">
-        <p><strong>Released:</strong> 2025</p>
-        <p><strong>Work with:</strong> Personal Project</p>
-        <p><strong>Platform:</strong> PC</p>
-        <p><strong>Team Size:</strong> 1</p>
-        <p><strong>Project Length:</strong> 2 weeks</p>
-        <p><strong>Responsibilities:</strong> Game design, programming, art, level creation, testing, and polish.</p>
-        <p><strong>Engine and Tools:</strong> Unity, Aseprite</p>
-        <p><strong>Assignment:</strong> Game Project subject, President University</p>
+      <hr class="section-divider"/>
+      <h2>Summary of Contributions</h2>
+      <p>
+        RedRuse was developed as a solo project for the "Game Project" subject during a game development bootcamp at my campus. I handled every aspect of the game, from initial concept and design to programming, art, and level creation. I focused on creating challenging platforming gameplay inspired by classic titles, with unique traps and surprises in every level.
+      </p>
+      <h3>RedRuse Overview</h3>
+      <h4>Aspect 1</h4>
+      <div class="project-gallery two-rows">
+        <div class="gallery-row">
+          <img src="src/redruse/redruserandombox1.gif" alt="RedRuse Random Box 1" class="gallery-img centered-media"/>
+          <img src="src/redruse/redruserandombox2.gif" alt="RedRuse Random Box 2" class="gallery-img centered-media"/>
+        </div>
+        <p>These screenshots display the 'random box' mechanic I implemented, which can either reward the player with points (cherry) or trigger a trap (enemy appearance), adding an element of surprise to the gameplay.</p>
       </div>
+      <h4>Aspect 2</h4>
+      <div class="project-gallery two-rows">
+        <div class="gallery-row">
+          <img src="src/redruse/redrusetrap1.gif" alt="RedRuse Trap GIF 1" class="gallery-img centered-media"/>
+          <img src="src/redruse/redrusetrap2.gif" alt="RedRuse Trap GIF 2" class="gallery-img centered-media"/>
+        </div>
+        <div class="gallery-row">
+          <img src="src/redruse/redrusetrap3.gif" alt="RedRuse Trap GIF 3" class="gallery-img centered-media"/>
+          <img src="src/redruse/redrusetrap4.gif" alt="RedRuse Trap GIF 4" class="gallery-img centered-media"/>
+        </div>
+        <p>These GIFs demonstrate various traps I designed and implemented, showcasing the challenging platforming elements in the game.</p>
+      </div>
+      <h4>Aspect 3</h4>
+      <div class="project-gallery">
+        <img src="src/redruse/redruse finish .png" alt="RedRuse Finish Place Screenshot" class="gallery-img centered-media"/>
+        <p class="gallery-caption">This image shows the finish line, represented by a house. I implemented the logic to trigger level completion upon the player's arrival at this location.</p>
+      </div>
+      <hr class="section-divider"/>
+      <h2>External Link</h2>
+      <p>Download on Itch.io: <a href="https://aditpmkas.itch.io/redruse" target="_blank">RedRuse Itch.io Page</a></p>
     </div>
-    <hr class="section-divider"/>
-    <h2>Summary of Contributions</h2>
-    <p>
-      RedRuse was developed as a solo project for the "Game Project" subject during a game development bootcamp at my campus. I handled every aspect of the game, from initial concept and design to programming, art, and level creation. I focused on creating challenging platforming gameplay inspired by classic titles, with unique traps and surprises in every level.
-    </p>
-
-    <h3>RedRuse Overview</h3>
-    <h4>Aspect 1</h4>
-    <div class="project-gallery">
-      <img src="src/redruse/redruserandombox1.gif" alt="RedRuse Random Box 1" class="gallery-img" style="max-width: 48%;"/>
-      <img src="src/redruse/redruserandombox2.gif" alt="RedRuse Random Box 2" class="gallery-img" style="max-width: 48%;"/>
-      <p>These screenshots display the 'random box' mechanic I implemented, which can either reward the player with points (cherry) or trigger a trap (enemy appearance), adding an element of surprise to the gameplay.</p>
-    </div>
-
-    <h4>Aspect 2</h4>
-    <div class="project-gallery">
-      <img src="src/redruse/redrusetrap1.gif" alt="RedRuse Trap GIF 1" class="gallery-img" style="max-width: 48%;"/>
-      <img src="src/redruse/redrusetrap2.gif" alt="RedRuse Trap GIF 2" class="gallery-img" style="max-width: 48%;"/>
-      <img src="src/redruse/redrusetrap3.gif" alt="RedRuse Trap GIF 3" class="gallery-img" style="max-width: 48%;"/>
-      <img src="src/redruse/redrusetrap4.gif" alt="RedRuse Trap GIF 4" class="gallery-img" style="max-width: 48%;"/>
-      <p>These GIFs demonstrate various traps I designed and implemented, showcasing the challenging platforming elements in the game.</p>
-    </div>
-
-    <h4>Aspect 3</h4>
-    <div class="project-gallery">
-      <img src="src/redruse/redruse finish .png" alt="RedRuse Finish Place Screenshot" class="gallery-img"/>
-      <p>This image shows the finish line, represented by a house. I implemented the logic to trigger level completion upon the player's arrival at this location.</p>
-    </div>
-
-    <hr class="section-divider"/>
-    <h2>External Link</h2>
-    <p>Download on Itch.io: <a href="https://aditpmkas.itch.io/redruse" target="_blank">RedRuse Itch.io Page</a></p>
   </main>
+  <section class="feedback-section">
+    <div class="container">
+      <h2>Feedback</h2>
+      <form id="feedbackForm" class="feedback-form">
+        <div class="form-group">
+          <label for="feedbackName">Name</label>
+          <input type="text" id="feedbackName" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackEmail">Email</label>
+          <input type="email" id="feedbackEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="feedbackMessage">Message</label>
+          <textarea id="feedbackMessage" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Feedback</button>
+      </form>
+    </div>
+  </section>
+  
   <footer>
-    <p>© 2025 Aditya Pamungkas</p>
-    <div class="social-icons-footer">
-      <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Aditya Pamungkas</h3>
+          <p>Game Developer & Creative Technologist</p>
+          <p>Passionate about creating immersive gaming experiences and innovative digital solutions.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Connect With Me</h4>
+          <div class="social-icons-footer">
+            <a href="https://www.linkedin.com/in/adityapamungkas" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aditpmkas" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/aditpmkas" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:aditya.pamungkas.sdn@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+          <p class="email-text">aditya.pamungkas.sdn@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Aditya Pamungkas. All rights reserved.</p>
+        <p>Built with passion and creativity</p>
+      </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html> 
