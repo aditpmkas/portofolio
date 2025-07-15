@@ -59,6 +59,11 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('animate');
       
+      // Animate skill bars
+      if (entry.target.classList.contains('skills-section')) {
+        animateSkillBars();
+      }
+      
       // Animate timeline items
       if (entry.target.classList.contains('timeline-item')) {
         entry.target.style.transitionDelay = entry.target.dataset.delay || '0ms';
@@ -85,29 +90,29 @@ document.addEventListener('DOMContentLoaded', () => {
     card.dataset.delay = `${index * 100}ms`;
     observer.observe(card);
   });
-
-  // Initialize typing animation
-  const heroTitle = document.querySelector('.hero h1');
-  if (heroTitle) {
-    const originalText = heroTitle.textContent;
-    setTimeout(() => {
-      typeWriter(heroTitle, originalText, 80);
-    }, 500);
-  }
 });
 
+// Animate skill bars
+function animateSkillBars() {
+  const skillBars = document.querySelectorAll('.skill-progress');
+  skillBars.forEach((bar, index) => {
+    setTimeout(() => {
+      const width = bar.getAttribute('data-width');
+      bar.style.width = width + '%';
+    }, index * 100);
+  });
+}
+
 // Enhanced project card hover effects
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-10px) rotateX(5deg)';
-      this.style.boxShadow = '0 25px 80px var(--shadow)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0) rotateX(0deg)';
-      this.style.boxShadow = '0 10px 40px var(--shadow)';
-    });
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-10px) rotateX(5deg)';
+    this.style.boxShadow = '0 25px 80px var(--shadow)';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0) rotateX(0deg)';
+    this.style.boxShadow = '0 10px 40px var(--shadow)';
   });
 });
 
@@ -134,6 +139,17 @@ function typeWriter(element, text, speed = 100) {
   }
   type();
 }
+
+// Initialize typing animation
+document.addEventListener('DOMContentLoaded', () => {
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    const originalText = heroTitle.textContent;
+    setTimeout(() => {
+      typeWriter(heroTitle, originalText, 80);
+    }, 500);
+  }
+});
 
 // Interactive background particles
 function createParticle() {
@@ -195,47 +211,50 @@ if (feedbackForm) {
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-    // Get form data
-    const formData = new FormData(feedbackForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+    const name = document.getElementById('feedbackName').value.trim();
+    const email = document.getElementById('feedbackEmail').value.trim();
+    const message = document.getElementById('feedbackMessage').value.trim();
 
-    // Get current date
-    const currentDate = new Date().toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
+    if (!name || !email || !message) {
+      showMessage('Please fill in all fields.', 'error', feedbackForm);
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      return;
+    }
 
-    // Template parameters for EmailJS
+    // EmailJS template parameters
     const templateParams = {
       from_name: name,
       from_email: email,
       message: message,
       to_name: 'Aditya Pamungkas',
-      current_date: currentDate
+      reply_to: email,
+      current_date: new Date().toLocaleString('id-ID', { 
+        timeZone: 'Asia/Jakarta',
+        year: 'numeric',
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })
     };
 
     try {
-      // Send email using EmailJS
       const response = await emailjs.send(
-        'service_y0bl05j', // Service ID
-        'template_cy5qz1m', // Template ID
+        'service_y0bl05j',    // Your EmailJS service ID
+        'template_cy5qz1m',   // Your EmailJS template ID
         templateParams
       );
 
       if (response.status === 200) {
-        showMessage('Thank you for your feedback! I will get back to you soon.', 'success');
+        showMessage('Message sent successfully!', 'success', feedbackForm);
         feedbackForm.reset();
       } else {
-        throw new Error('Failed to send email');
+        showMessage('Failed to send message. Please try again.', 'error', feedbackForm);
       }
     } catch (error) {
-      console.error('Error sending email:', error);
-      showMessage('Sorry, there was an error sending your message. Please try again later.', 'error');
+      console.error('EmailJS error:', error);
+      showMessage('Failed to send message. Please try again.', 'error', feedbackForm);
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
@@ -243,30 +262,45 @@ if (feedbackForm) {
   });
 }
 
-// Show message function
-function showMessage(text, type) {
-  // Remove existing messages
-  const existingMessage = document.querySelector('.message');
-  if (existingMessage) {
-    existingMessage.remove();
-  }
+// === SHOW MESSAGE FUNCTION ===
+function showMessage(message, type, form) {
+  const existingMsg = form.querySelector('.message');
+  if (existingMsg) existingMsg.remove();
 
-  // Create new message
-  const message = document.createElement('div');
-  message.className = `message ${type} show`;
-  message.textContent = text;
+  const messageDiv = document.createElement('div');
+  messageDiv.className = `message ${type} show`;
+  messageDiv.textContent = message;
+  form.insertBefore(messageDiv, form.firstChild);
 
-  // Insert message before the form
-  const form = document.querySelector('.feedback-form');
-  if (form) {
-    form.parentNode.insertBefore(message, form);
-
-    // Auto-hide message after 5 seconds
-    setTimeout(() => {
-      message.classList.remove('show');
-      setTimeout(() => {
-        message.remove();
-      }, 300);
-    }, 5000);
-  }
+  setTimeout(() => messageDiv.remove(), 5000);
 }
+
+// === SMOOTH SCROLL ===
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// === FADE-IN ON SCROLL ===
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px',
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const animateElements = document.querySelectorAll('.project-card, .profile-card, .section-header');
+  animateElements.forEach(el => observer.observe(el));
+});
